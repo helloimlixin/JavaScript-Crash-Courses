@@ -88,6 +88,8 @@ const person = {
     }
 }
 
-alert(person); // it'll just show object
+// alert(person); // it'll just show object
 console.log(person);
 console.log(person.firstName, person.lastName, person.age);
+console.log(person.hobbies[1]);
+console.log(person.address.city);
