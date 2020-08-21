@@ -93,3 +93,56 @@ console.log(person);
 console.log(person.firstName, person.lastName, person.age);
 console.log(person.hobbies[1]);
 console.log(person.address.city);
+
+// Create variables using destructuring (ES6).
+// const { firstName, lastName } = person;
+// console.log(firstName);
+
+const { firstName, lastName, address: { city } } = person;
+console.log(city);
+
+// We can also add attributes.
+person.email = 'john@email.com';
+console.log(person);
+
+// Array of objects.
+const todos = [
+    {
+        id: 1,
+        text: 'Take out trash',
+        isCompleted: true
+    },
+    {
+        id: 2,
+        text: 'Meeting with boss',
+        isCompleted: true
+    },
+    {
+        id: 3,
+        text: 'Stripper appointment',
+        isCompleted: false
+    },
+];
+
+console.log(todos);
+console.log(todos[1].text);
+
+// JSON: JavaScript Object Notation.
+const todoJSON = JSON.stringify(todos);
+console.log(todoJSON);
+
+// for-loops.
+// for (let i = 0; i <= 10; i++) {
+//     console.log(`${i}-th iteration...`);
+// }
+
+for (let i = 0; i < todos.length; i++) {
+    console.log(`${i}-th iteration: ${todos[i].text}`);
+}
+
+// while-loops.
+// let i = 0;
+// while(i < 10) {
+//     console.log(`${i}-th iteration...`);
+//     i++;
+// }
