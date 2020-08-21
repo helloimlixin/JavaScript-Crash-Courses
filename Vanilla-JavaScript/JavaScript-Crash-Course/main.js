@@ -136,9 +136,13 @@ console.log(todoJSON);
 //     console.log(`${i}-th iteration...`);
 // }
 
-for (let i = 0; i < todos.length; i++) {
-    console.log(`${i}-th iteration: ${todos[i].text}`);
-}
+// for (let i = 0; i < todos.length; i++) {
+//     console.log(`${i}-th iteration: ${todos[i].text}`);
+// }
+
+// for (let todo of todos) {
+//     console.log(todo.id);
+// }
 
 // while-loops.
 // let i = 0;
@@ -146,3 +150,22 @@ for (let i = 0; i < todos.length; i++) {
 //     console.log(`${i}-th iteration...`);
 //     i++;
 // }
+
+// High-Order Array Methods (Recommended).
+// forEach, map, filter
+todos.forEach(function (todo) {
+    console.log(todo.text);
+});
+
+// map: returns an array
+// const todoText = todos.map(function(todo) {
+//     return todo.text;
+// });
+
+// filter: with conditions
+const todoCompleted = todos.filter(function(todo) {
+    return todo.isCompleted === true;
+}).map(function (todo) {
+    return todo.text;
+});
+console.log(todoCompleted);
